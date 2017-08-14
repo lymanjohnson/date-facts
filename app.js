@@ -29,14 +29,14 @@ let secondsOfDay = now.diff(moment().hours(0).minutes(0).seconds(0),"seconds");
 
 
 
-console.log("It is",date);
-console.log("It is the",now.format("DDDo"),"day of the year.");
-console.log("it is",secondsOfDay,"seconds into the day.");
+console.log("It is",chalk.blue(date));
+console.log("It is the",chalk.cyan(now.format("DDDo")),"day of the year.");
+console.log("it is",chalk.green(secondsOfDay),"seconds into the day.");
 
-if(now.isDST){console.log("It is daylight savings time.");}
+if(now.isDST){console.log("It",chalk.green("is"),"daylight savings time.");}
 
-else {console.log("It is not daylight savings time.");}
+else {console.log("It",chalk.red("is not"),"daylight savings time.");}
 
-if(now.isLeapYear) {console.log("It is a leap year.");}
+if(now.isLeapYear) {console.log("It",chalk.red("is"),"a leap year.");}
 
-else {console.log("It is not a leap year.");}
+else {console.log("It",chalk.red("is not"),"a leap year.");}
